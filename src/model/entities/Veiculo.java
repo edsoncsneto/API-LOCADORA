@@ -9,6 +9,9 @@ public class Veiculo {
 	private String chassi;
 	private String modelo;
 	
+	public Veiculo() {
+	}
+	
 	public Veiculo(String placa, String cor, String marca, String categoria, String chassi, String modelo) {
 		this.placa = placa;
 		this.cor = cor;
@@ -69,12 +72,12 @@ public class Veiculo {
 	@Override
 	public String toString() {
 		return "Veiculo: " +
-				"placa=" + placa +
-				"cor=" + cor +
-				"marca=" + marca +
-				"categoria=" + categoria +
-				"chassi=" + chassi +
-				"modelo=" + modelo;
+				"\nplaca=" + placa +
+				"\ncor=" + cor +
+				"\nmarca=" + marca +
+				"\ncategoria=" + categoria +
+				"\nchassi=" + chassi +
+				"\nmodelo=" + modelo;
 	}
 	
 	
