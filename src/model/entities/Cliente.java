@@ -9,6 +9,24 @@ public class Cliente {
 	private String numero;
 	private String logradouro;
 	private String cidade;
+	private String uf;
+	private String cep;
+	
+	public Cliente() {
+	}
+	
+	public Cliente(String cpf, String nome, String cnh, String bairro, String numero, String logradouro, String cidade,
+			String uf, String cep) {
+		this.cpf = cpf;
+		this.nome = nome;
+		this.cnh = cnh;
+		this.bairro = bairro;
+		this.numero = numero;
+		this.logradouro = logradouro;
+		this.cidade = cidade;
+		this.uf = uf;
+		this.cep = cep;
+	}
 	
 	public String getCpf() {
 		return cpf;
@@ -82,34 +100,18 @@ public class Cliente {
 		this.cep = cep;
 	}
 
-	private String uf;
-	private String cep;
-	
-	public Cliente(String cpf, String nome, String cnh, String bairro, String numero, String logradouro, String cidade,
-			String uf, String cep) {
-		this.cpf = cpf;
-		this.nome = nome;
-		this.cnh = cnh;
-		this.bairro = bairro;
-		this.numero = numero;
-		this.logradouro = logradouro;
-		this.cidade = cidade;
-		this.uf = uf;
-		this.cep = cep;
-	}
-
 	@Override
 	public String toString() {
 		return "Cliente: "
-				+ "cpf=" + cpf +
-				"nome=" + nome +
-				"cnh=" + cnh +
-				"bairro=" + bairro +
-				"numero=" + numero +
-				"logradouro=" + logradouro +
-				"cidade=" + cidade +
-				"uf=" + uf +
-				"cep=" + cep;
+				+ "\ncpf=" + cpf +
+				"\nnome=" + nome +
+				"\ncnh=" + cnh +
+				"\nbairro=" + bairro +
+				"\nnumero=" + numero +
+				"\nlogradouro=" + logradouro +
+				"\ncidade=" + cidade +
+				"\nuf=" + uf +
+				"\ncep=" + cep;
 	}
 
 }

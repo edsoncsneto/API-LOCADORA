@@ -29,8 +29,7 @@ public class VeiculoDaoJDBC implements GenericDao<Veiculo, String>{
 			st=conn.prepareStatement(""
 					+ "INSERT INTO veiculo "
 					+ "(placa, cor, marca, categoria, chassi, modelo) "
-					+ "VALUES (?,?,?,?,?,?)",
-					Statement.RETURN_GENERATED_KEYS);
+					+ "VALUES (?,?,?,?,?,?)");
 			
 			st.setString(1, obj.getPlaca());
 			st.setString(2, obj.getCor());
@@ -88,7 +87,7 @@ public class VeiculoDaoJDBC implements GenericDao<Veiculo, String>{
 			int rowsAffected = st.executeUpdate();
 			
 			if (rowsAffected==0) {
-				throw new DbException("Não há nenhum carro com essa placa no sistema");
+				throw new DbException("Não há nenhum veículo com essa placa no sistema");
 			}
 			
 		} catch (SQLException e) {
@@ -113,8 +112,7 @@ public class VeiculoDaoJDBC implements GenericDao<Veiculo, String>{
 			rs = st.executeQuery();
 			
 			if(rs.next()) {
-				Veiculo veiculo = VeiculoService.instatiateVeiculo(rs);
-				return veiculo;
+				return VeiculoService.instatiateVeiculo(rs);
 			}
 			return null;
 			
