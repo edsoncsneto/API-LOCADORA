@@ -11,7 +11,7 @@ import db.DB;
 import db.DbException;
 import model.dao.GenericDao;
 import model.entities.Cliente;
-import service.ClienteService;
+import model.service.ClienteService;
 
 public class ClienteDaoJDBC implements GenericDao<Cliente, String>{
 	

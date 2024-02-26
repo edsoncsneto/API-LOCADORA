@@ -1,10 +1,10 @@
 package model.dao.implementation;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +12,7 @@ import db.DB;
 import db.DbException;
 import model.dao.GenericDao;
 import model.entities.Veiculo;
-import service.VeiculoService;
+import model.service.VeiculoService;
 
 public class VeiculoDaoJDBC implements GenericDao<Veiculo, String>{
 	
@@ -129,11 +129,10 @@ public class VeiculoDaoJDBC implements GenericDao<Veiculo, String>{
 	public List<Veiculo> findAll() {
 		PreparedStatement st = null;
 		ResultSet rs = null;
-		List<Veiculo> list = new ArrayList<>();
-		
 		try {
 			st = conn.prepareStatement("SELECT * FROM veiculo");
 			rs = st.executeQuery();
+			List<Veiculo> list = new ArrayList<>();
 			
 			while (rs.next()) {
 				list.add(VeiculoService.instatiateVeiculo(rs));

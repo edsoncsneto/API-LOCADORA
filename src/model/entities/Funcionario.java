@@ -2,23 +2,26 @@ package model.entities;
 
 public class Funcionario {
 
-	private String matricula;
+	private Integer matricula;
 	private String nome;
 	private String cpf;
 	private int quantidade_locacoes;
 	
-	public Funcionario(String matricula, String nome, String cpf) {
+	public Funcionario() {
+	}
+	
+	public Funcionario(Integer matricula, String nome, String cpf) {
 		this.matricula = matricula;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.quantidade_locacoes = 0;
 	}
 
-	public String getMatricula() {
+	public Integer getMatricula() {
 		return matricula;
 	}
 
-	public void setMatricula(String matricula) {
+	public void setMatricula(Integer matricula) {
 		this.matricula = matricula;
 	}
 
@@ -49,10 +52,10 @@ public class Funcionario {
 	@Override
 	public String toString() {
 		return "Funcionario: " +
-				"matricula=" + matricula +
-				"nome=" + nome +
-				"cpf=" + cpf +
-				"quantidade_locacoes=" + quantidade_locacoes;
+				"\nmatricula=" + matricula +
+				"\nnome=" + nome +
+				"\ncpf=" + cpf +
+				"\nquantidade_locacoes=" + quantidade_locacoes;
 	}
 	
 }
