@@ -4,44 +4,46 @@ import java.time.LocalDate;
 
 public class Locacao {
 	
-	private int cod_locacao;
-	private LocalDate data_inicio;
-	private LocalDate data_fim;
+	private Integer codLocacao;
+	private LocalDate dataInicio;
+	private LocalDate dataFim;
 	private Cliente cliente;
 	private Funcionario funcionario;
 	
-	public Locacao(int cod_locacao, LocalDate data_inicio, LocalDate data_fim, Cliente cliente,
+	public Locacao() {
+	}
+	
+	public Locacao(Integer codLocacao, LocalDate dataInicio, LocalDate dataFim, Cliente cliente,
 			Funcionario funcionario) {
-		super();
-		this.cod_locacao = cod_locacao;
-		this.data_inicio = data_inicio;
-		this.data_fim = data_fim;
+		this.codLocacao = codLocacao;
+		this.dataInicio = dataInicio;
+		this.dataFim = dataFim;
 		this.cliente = cliente;
 		this.funcionario = funcionario;
 	}
 
-	public int getCod_locacao() {
-		return cod_locacao;
+	public Integer getCodLocacao() {
+		return codLocacao;
 	}
 
-	public void setCod_locacao(int cod_locacao) {
-		this.cod_locacao = cod_locacao;
+	public void setCodLocacao(Integer codLocacao) {
+		this.codLocacao = codLocacao;
 	}
 
-	public LocalDate getData_inicio() {
-		return data_inicio;
+	public LocalDate getDataInicio() {
+		return dataInicio;
 	}
 
-	public void setData_inicio(LocalDate data_inicio) {
-		this.data_inicio = data_inicio;
+	public void setDataInicio(LocalDate dataInicio) {
+		this.dataInicio = dataInicio;
 	}
 
-	public LocalDate getData_fim() {
-		return data_fim;
+	public LocalDate getDataFim() {
+		return dataFim;
 	}
 
-	public void setData_fim(LocalDate data_fim) {
-		this.data_fim = data_fim;
+	public void setDataFim(LocalDate dataFim) {
+		this.dataFim = dataFim;
 	}
 
 	public Cliente getCliente() {
@@ -63,15 +65,15 @@ public class Locacao {
 	@Override
 	public String toString() {
 		return "Locacao: " +
-				"cod_locacao=" + cod_locacao +
-				"data_inicio=" + data_inicio +
-				"data_fim=" + data_fim +
-				"Cliente: " + 
-				"nome=" + cliente.getNome() +
-				"cpf=" + cliente.getCep() +
-				"Funcionario=" + 
-				"nome=" + funcionario.getNome() +
-				"cpf=" + funcionario.getCpf();
+				"\ncodLocacao=" + codLocacao +
+				"\ndataInicio=" + dataInicio +
+				"\ndataFim=" + dataFim +
+				"\nCliente: " + 
+				"\nnome=" + cliente.getNome() +
+				"\ncpf=" + cliente.getCep() +
+				"\nFuncionario=" + 
+				"\nnome=" + funcionario.getNome() +
+				"\ncpf=" + funcionario.getCpf();
 	}
 
 }

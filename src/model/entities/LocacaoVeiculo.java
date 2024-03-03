@@ -5,8 +5,10 @@ public class LocacaoVeiculo {
 	Locacao locacao;
 	Veiculo veiculo;
 	
+	public LocacaoVeiculo() {
+	}
+	
 	public LocacaoVeiculo(Locacao locacao, Veiculo veiculo) {
-		super();
 		this.locacao = locacao;
 		this.veiculo = veiculo;
 	}
@@ -30,8 +32,8 @@ public class LocacaoVeiculo {
 	@Override
 	public String toString() {
 		return "LocacaoVeiculo: " +
-				 "locacao=" + locacao.getCod_locacao() +
-				 "veiculo=" + veiculo.getPlaca();
+				 "\nlocacao=" + locacao.getCodLocacao() +
+				 "\nveiculo=" + veiculo.getPlaca();
 	}
 
 }

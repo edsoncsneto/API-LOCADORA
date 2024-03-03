@@ -5,6 +5,9 @@ public class TelefoneCliente {
 	private Cliente cliente;
 	private String telefone;
 	
+	public TelefoneCliente() {
+	}
+	
 	public TelefoneCliente(Cliente cliente, String telefone) {
 		super();
 		this.cliente = cliente;
@@ -30,8 +33,8 @@ public class TelefoneCliente {
 	@Override
 	public String toString() {
 		return "TelefoneCliente: "
-				+ "cliente=" + cliente +
-				"telefone=" + telefone;
+				+ "\ncliente=" + cliente +
+				"\n\ntelefone=" + telefone;
 	}
 
 }
